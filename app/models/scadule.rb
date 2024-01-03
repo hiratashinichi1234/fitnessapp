@@ -1,0 +1,2 @@
+class Scadule < ApplicationRecord
+end

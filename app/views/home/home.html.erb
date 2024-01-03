@@ -1,0 +1,40 @@
+<section class=" bg-gray-100 dark:bg-gray-900">
+    <div class="image">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2x2 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">理想のカラダ作りに挑戦!!</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">日々のトレーニング内容を管理し短い期間に確実にあなたの目指す体作りをサポートします!!💪
+            </p>
+            
+        </div>
+        
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <%=image_tag "sample.jpg", style: "border-radius: 50%;" %>
+        </div>              
+    </div>
+    </div>
+
+    <% if @daily_workout%>
+    <%=render 'daily_workouts/daily_workout'%>
+    <%end%>
+ </section>
+    
+ <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      //共通のオプション設定
+      ScrollReveal({
+        reset: true,
+        distance: "60px",
+        duration: 2000, //2sかけてアニメーション
+        delay: 200 /* 0.2s後に発動 */,
+      });
+
+      ScrollReveal().reveal("h1, p", {
+        delay: 400,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".image", {
+        delay: 400,
+        origin: "right",
+      });
+    </script>
